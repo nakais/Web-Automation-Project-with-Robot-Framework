@@ -13,7 +13,7 @@ robot-framework-web-automation/
 │
 ├── resources/
 │   ├── keywords.robot
-│   ├── jayed.py
+│   ├── lower.py
 │   └── Test_Suite.xlsx
 │
 ├── output/
@@ -40,6 +40,7 @@ robot-framework-web-automation/
 1. Open the browser and navigate to the login page.
 2. Enter the valid username and password.
 3. Click the login button.
+4. After successfully login clcik the logout button.
 
 **Expected Result:**
 - The user should be redirected to the dashboard page.
@@ -48,7 +49,7 @@ robot-framework-web-automation/
 
 **Test Data:**
 - Username: Admin
-- Password: invalid_password
+- Password: admin123123
 
 **Test Steps:**
 1. Open the browser and navigate to the login page.
@@ -65,20 +66,19 @@ Adjust the settings in the `config/settings.robot` file to match your environmen
 ## Running Tests
 
 Execute the following command to run all tests:
-
 ```bash
 robot tests/
 ```
 
 You can also run a specific test suite by providing its file path:
 ```bash
-robot tests/test.robot
+robot test.robot
 ```
 ## Test Data
 Test data is stored in an Excel file (`Test_Suite.xlsx`). Make sure to update the data in this file according to your test scenarios.
 
 ## Custom Keywords
-The jayed.py file contains custom Python keywords used in the test cases. Customize these keywords based on the requirements of your web application.
+The lower.py file contains custom Python code which is used to modify the username upper to lower. Customize these code based on the requirements of your web application.
 
 ## Viewing Reports
 After test execution, open the generated HTML report located in the output directory for detailed information about test results.
